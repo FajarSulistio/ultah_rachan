@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="A little digital birthday universe, made especially for you.">
+  <title>Happy Birthday, Rahma 🎂</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- OPENING SCREEN                                -->
+  <!-- ============================================ -->
+  <div id="opening" class="opening">
+    <div class="opening__stars" aria-hidden="true"></div>
+    <div class="opening__content">
+      <h1 class="opening__text">Today is a little<br>different. Because today<br>is all about you&hellip;</h1>
+      <button id="openBtn" class="btn btn--primary opening__btn" type="button">
+        Open Your Birthday Surprise <span aria-hidden="true">🎁</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Floating music toggle (visible after opening) -->
+  <button id="musicToggle" class="music-toggle is-hidden" type="button" aria-label="Nyalakan musik" aria-pressed="false">
+    <svg class="icon icon--note-on" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+    <svg class="icon icon--note-off" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="3" y1="3" x2="21" y2="21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </button>
+  <audio id="bgMusic" loop preload="none">
+    <source src="assets/music/birthday-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ============================================ -->
+  <!-- MAIN EXPERIENCE                               -->
+  <!-- ============================================ -->
+  <main id="main" class="main is-hidden">
+
+    <!-- 1. BIRTHDAY SURPRISE -->
+    <section id="hero" class="section hero" aria-label="Birthday Surprise">
+      <div class="hero__hearts" aria-hidden="true"></div>
+      <div class="hero__sparkles" aria-hidden="true"></div>
+      <div class="hero__balloons" aria-hidden="true"></div>
+      <div class="hero__content">
+        <div class="hero__photo-frame">
+          <img class="hero__photo" src="assets/images/hero-photo.jpg" alt="Foto Rahma Sulis Khairunnisa">
+        </div>
+        <p class="hero__eyebrow">Happy Birthday</p>
+        <h2 class="hero__name">Rahma Sulis Khairunnisa</h2>
+        <!-- Umur opsional — hapus <span class="hero__age"> ini kalau tidak ingin ditampilkan -->
+        <p class="hero__date">25 Agustus <span class="hero__age">— 21 tahun</span></p>
+        <p class="hero__message">
+          Today is your day. Aku buat ini kecil-kecilan,
+          khusus untuk kamu — semoga bikin kamu senyum.
+        </p>
+        <div class="hero__scroll-hint" aria-hidden="true">
+          <span>scroll untuk lanjut</span>
+          <span class="hero__scroll-arrow">↓</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT YOU -->
+    <section id="about" class="section about" aria-label="Tentang Kamu">
+      <header class="section__header reveal">
+        <p class="section__eyebrow">bagian satu</p>
+        <h2 class="section__title">A Little Something<br>About You</h2>
+      </header>
+
+      <div class="about__intro reveal">
+        <p class="about__message">Kamu cantikkkk,kamu baik, trus kamu seruu bangettt. Kamu juga punya sisi lembut yang mungkin kamu gatau, kamu yang pengertian apalagi ke aku juga gapernah gagal bikin aku baper, kamu juga perhatian sama kucing dan itu lucu—walaupun kadang bikin aku cemburu😿. Dan satu hal yang paling kelihatan dari kamu: senyum kamu. Senyum kamu selalu berhasil bikin aku jatuh cinta ke kamu lagi dan lagi.❤️</p>
+      </div>
+<!--
+      <div class="about__traits">
+        <article class="trait-card reveal">
+          <h3 class="trait-card__title">Your Strength</h3>
+          <p class="trait-card__text">[DESKRIPSI — sisi kuat/tangguh dari dirinya yang kamu kagumi]</p>
+        </article>
+
+        <article class="trait-card reveal">
+          <h3 class="trait-card__title">The Way You See Things</h3>
+          <p class="trait-card__text">[DESKRIPSI — cara dia mikir atau melihat sesuatu yang bikin kamu terkesan]</p>
+        </article>
+
+        <article class="trait-card reveal">
+          <h3 class="trait-card__title">Things That Make You, You</h3>
+          <p class="trait-card__text">[DESKRIPSI — hal unik/khas yang cuma ada di dia]</p>
+        </article>
+      </div>
+    </section>
+-->
+    <!-- 3. LITTLE THINGS I LOVE ABOUT YOU -->
+    <section id="love" class="section love" aria-label="Hal-hal Kecil yang Aku Suka Darimu">
+      <header class="section__header reveal">
+        <p class="section__eyebrow">bagian dua</p>
+        <h2 class="section__title">Little Things I<br>Love About You</h2>
+      </header>
+
+      <div class="love__grid">
+        <article class="love-card reveal">
+          <button class="love-card__photo polaroid" type="button">
+            <img src="assets/images/little-things-01.jpg" alt="Dia sedang tersenyum">
+          </button>
+          <div class="love-card__body">
+            <h3 class="love-card__title">Your Smile</h3>
+            <p class="love-card__text">[Liat Senyum yang Manisnya tiada tara ini]</p>
+          </div>
+        </article>
+
+        <article class="love-card reveal">
+          <button class="love-card__photo polaroid" type="button" >
+            <img src="assets/images/photo-07.jpg" alt="Dia sedang tertawa lepas">
+          </button>
+          <div class="love-card__body">
+            <h3 class="love-card__title">Your Laugh</h3>
+            <p class="love-card__text">[aku suka bangett denger ketawa kamuuu]</p>
+          </div>
+        </article>
+
+        <article class="love-card reveal">
+          <button class="love-card__photo polaroid" type="button">
+            <img src="assets/images/little-things-06.jpg" alt="Dia sedang bermain dengan kucing">
+          </button>
+          <div class="love-card__body">
+            <h3 class="love-card__title">Your Soft Side</h3>
+            <p class="love-card__text">[irinyaaaa]</p>
+          </div>
+        </article>
+
+        <article class="love-card reveal">
+          <button class="love-card__photo polaroid" type="button">
+            <img src="assets/images/little-things-07.jpg" alt="Momen candid kebiasaan kecilnya">
+          </button>
+          <div class="love-card__body">
+            <h3 class="love-card__title">Your Naughty side</h3>
+            <p class="love-card__text">（づ￣3￣）づ╭❤️～</p>
+          </div>
+        </article>
+
+        <article class="love-card reveal">
+          <button class="love-card__photo polaroid" type="button" ">
+            <img src="assets/images/photo-08.jpg" alt="Foto favoritku tentang dia">
+          </button>
+          <div class="love-card__body">
+            <h3 class="love-card__title">Just You</h3>
+            <p class="love-card__text">Sial cewe gwejh cakep baddhh</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. YOUR LITTLE GALLERY -->
+    <section id="memories" class="section memories" aria-label="Galeri Foto Kamu">
+      <header class="section__header reveal">
+        <p class="section__eyebrow">bagian tiga</p>
+        <h2 class="section__title">Your Little<br>Gallery</h2>
+        <p class="section__subtitle">Beberapa foto favoritku tentang kamu. Ketuk untuk lihat lebih besar.</p>
+      </header>
+
+      <div class="gallery">
+        <button class="polaroid reveal" type="button" style="--rot:-3deg">
+          <img src="assets/images/photo-01.jpg" alt="[CAPTION FOTO 1]">
+        </button>
+        <button class="polaroid reveal" type="button"  style="--rot:2deg">
+          <img src="assets/images/photo-02.jpg" alt="[CAPTION FOTO 2]">
+        </button>
+        <button class="polaroid reveal" type="button"  style="--rot:-2deg">
+          <img src="assets/images/photo-03.jpg" alt="[CAPTION FOTO 3]">
+        </button>
+        <button class="polaroid reveal" type="button" style="--rot:3deg">
+          <img src="assets/images/photo-04.jpg" alt="[CAPTION FOTO 4]">
+        </button>
+        <button class="polaroid reveal" type="button"  style="--rot:-1deg">
+          <img src="assets/images/photo-05.jpg" alt="[CAPTION FOTO 5]">
+        </button>
+        <button class="polaroid reveal" type="button"  style="--rot:2.5deg">
+          <img src="assets/images/photo-06.jpg" alt="[CAPTION FOTO 6]">
+        </button>
+      </div>
+
+      <!-- Lightbox modal -->
+      <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Tutup">✕</button>
+        <figure class="lightbox__figure">
+          <img id="lightboxImg" src="" alt="">
+          <figcaption id="lightboxCaption"></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 5. LITTLE GIFTS -->
+    <section id="gifts" class="section gifts" aria-label="Hadiah Kecil Untuk Kamu">
+      <header class="section__header reveal">
+        <p class="section__eyebrow">bagian empat</p>
+        <h2 class="section__title">Little Gifts<br>🎁</h2>
+        <p class="section__subtitle">Empat hadiah kecil. Ketuk satu-satu untuk membukanya.</p>
+      </header>
+
+      <div class="gift-grid">
+        <button
+          class="gift-box reveal"
+          type="button"
+          data-gift-title="kamu cantik dan kita berdua tau itu"
+          data-gift-message="duh aku bingung gimana caranya muji kamu,soalnya semua tentang kamu sempurna dan kita berdua tau itu"
+        >
+          <span class="gift-box__icon" aria-hidden="true">🎁</span>
+          <span class="gift-box__label">A Little<br>Compliment</span>
+        </button>
+
+        <button
+          class="gift-box reveal"
+          type="button"
+          data-gift-title="One Little Moment"
+          data-gift-message="aku gatau kenapa bikin yang ini soalnya aku gabisa milih satu momen kecil sama kamu,karna semua momen sama kamu itu besarr dan aku sukaaaa"
+        >
+          <span class="gift-box__icon" aria-hidden="true">🎁</span>
+          <span class="gift-box__label">A Tiny<br>Memory</span>
+        </button>
+
+        <button
+          class="gift-box reveal"
+          type="button"
+          data-gift-title="For Your New Chapter ✨"
+          data-gift-message="Semoga di umur kamu yang baru ini, kamu punya lebih banyak alasan buat senyum, lebih banyak hal yang bisa kamu banggakan, dan semoga hal-hal yang kamu inginkan satu per satu bisa tercapai. 🌷"
+        >
+          <span class="gift-box__icon" aria-hidden="true">🎁</span>
+          <span class="gift-box__label">A Wish<br>For You</span>
+        </button>
+
+        <button
+          class="gift-box reveal"
+          type="button"
+          data-gift-title="Just So You Know…"
+          data-gift-message="Aku mungkin nggak selalu bisa bilang semuanya dengan baik, tapi aku harap kamu tahu kalau kamu itu berarti buat aku. Dan di hari ulang tahun kamu ini, aku cuma mau kamu tahu: aku senang kamu terlahir dan ketemu sama aku. ❤️"
+        >
+          <span class="gift-box__icon" aria-hidden="true">🎁</span>
+          <span class="gift-box__label">Something I<br>Want You To Know</span>
+        </button>
+      </div>
+
+      <!-- Gift modal -->
+      <div id="giftModal" class="gift-modal" aria-hidden="true">
+        <button class="gift-modal__close" id="giftModalClose" type="button" aria-label="Tutup">✕</button>
+        <div class="gift-modal__card">
+          <span class="gift-modal__icon" aria-hidden="true">💌</span>
+          <h3 id="giftModalTitle" class="gift-modal__title"></h3>
+          <p id="giftModalMessage" class="gift-modal__message"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. A LETTER FOR YOU -->
+    <section id="letter" class="section letter" aria-label="Surat Untuk Kamu">
+      <header class="section__header reveal">
+        <p class="section__eyebrow">bagian lima</p>
+        <h2 class="section__title">A Letter<br>For You</h2>
+      </header>
+
+      <div class="envelope-wrap reveal">
+        <button id="envelope" class="envelope" type="button" aria-expanded="false" aria-controls="letterPaper">
+          <span class="envelope__flap"></span>
+          <span class="envelope__body"></span>
+          <span class="envelope__seal" aria-hidden="true">❤</span>
+          <span class="envelope__label">Open me when you're ready 💌</span>
+        </button>
+
+        <article id="letterPaper" class="letter-paper" hidden>
+          <p class="letter-paper__salutation">Untuk Rahma,</p>
+          <div class="letter-paper__body">
+            <p>Selamat ulang tahun, sayang ❤️
+
+
+
+Disini aku mau kamu tau kalau aku bersyukur banget bisa kenal kamu trus juga bisa ngeliat kamu tumbuh jadi diri kamu yang sekarang, berarti ini udah ucapan ultah ke 4 dari aku sebagai pacar kamu yaaa. Kamu selalu jadi orang yang baik, cantik, dan orang yang selalu aku sayangin dan banggain.
+
+
+
+Aku harap di umur kamu yang baru ini, kamu bisa lebih banyak bahagia, lebih percaya sama diri kamu sendiri, dan bisa mendapatkan hal-hal yang selama ini kamu usahakan. Kalau nanti ada hari yang terasa berat, semoga kamu tetap ingat kalau kamu nggak harus selalu kuat sendirian, karna aku bakal selalu ada disini buat kamu.
+
+
+
+Aku jujur gak jago nunjukin atau ngomong apa yang aku rasakan, tapi aku harap kamu tahu kalau kamu berarti buat aku.
+
+
+
+Selamat bertambah usia, Rahma. Semoga tahun ini jadi tahun yang baik buat kamu. ❤️
+
+Love you ❤️
+</p>
+          </div>
+          <p class="letter-paper__signoff">Selalu sayang kamu,<br><span class="letter-paper__signature">Fajar</span></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. WISHES FOR YOU -->
+    <section id="wishes" class="section wishes" aria-label="Harapan Untuk Kamu">
+      <header class="section__header reveal">
+        <p class="section__eyebrow">bagian enam</p>
+        <h2 class="section__title">Wishes<br>For You</h2>
+        <p class="section__subtitle">Aku harap tahun ini bawa kamu lebih banyak&hellip;</p>
+      </header>
+
+      <div class="wishes__grid">
+        <article class="wish-card reveal">
+          <span class="wish-card__icon" aria-hidden="true">🌟</span>
+          <p class="wish-card__text">More reasons to smile</p>
+        </article>
+
+        <article class="wish-card reveal">
+          <span class="wish-card__icon" aria-hidden="true">🌷</span>
+          <p class="wish-card__text">More beautiful moments</p>
+        </article>
+
+        <article class="wish-card reveal">
+          <span class="wish-card__icon" aria-hidden="true">✨</span>
+          <p class="wish-card__text">More dreams coming true</p>
+        </article>
+
+        <article class="wish-card reveal">
+          <span class="wish-card__icon" aria-hidden="true">💫</span>
+          <p class="wish-card__text">More things you're proud of</p>
+        </article>
+
+        <article class="wish-card reveal">
+          <span class="wish-card__icon" aria-hidden="true">❤️</span>
+          <p class="wish-card__text">More happiness</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 8. MAKE A WISH -->
+    <section id="wish" class="section wish-cake" aria-label="Buat Permohonan">
+      <header class="section__header reveal">
+        <p class="section__eyebrow">sebelum kamu pergi</p>
+        <h2 class="section__title">Make A Wish<br>🎂</h2>
+        <p class="section__subtitle">Pejamkan mata, buat satu permohonan.</p>
+      </header>
+
+      <div class="cake-wrap reveal">
+        <div class="cake" id="cake">
+          <div class="cake__candle-row">
+            <span class="cake__candle"><span class="cake__flame"></span></span>
+            <span class="cake__candle"><span class="cake__flame"></span></span>
+            <span class="cake__candle"><span class="cake__flame"></span></span>
+          </div>
+          <div class="cake__layer cake__layer--top"></div>
+          <div class="cake__layer cake__layer--bottom"></div>
+          <div class="cake__plate"></div>
+        </div>
+
+        <button id="makeWishBtn" class="btn btn--primary cake__btn" type="button">
+          Make A Wish <span aria-hidden="true">✨</span>
+        </button>
+
+        <p id="wishMessage" class="cake__message" hidden>
+          Whatever you wished for, I hope it comes true.
+        </p>
+      </div>
+    </section>
+
+    <!-- 9. FINAL BIRTHDAY MESSAGE -->
+    <section id="final" class="section final" aria-label="Pesan Penutup">
+      <div class="final__hearts" aria-hidden="true"></div>
+      <div class="final__content">
+        <p class="final__line reveal">Happy Birthday, sayang ❤️</p>
+        <p class="final__line reveal">Thank you for being you.</p>
+        <p class="final__line reveal">I hope you know how special you are — today and always.</p>
+        <p class="final__line reveal">And if I get to be there for some of the moments this year brings you, I'll be really happy.</p>
+        <p class="final__line final__line--big reveal">Happy Birthday, Sayang.</p>
+
+        
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
