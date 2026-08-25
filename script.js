@@ -225,6 +225,44 @@
   });
 
   /* ---------------------------------------------------------------------
+     5a2. WISHES FOR YOU (envelope letter → bridge to Make A Wish)
+  --------------------------------------------------------------------- */
+  const wishEnvelope = document.getElementById('wishEnvelope');
+  const wishOpenBtn = document.getElementById('wishOpenBtn');
+  const wishLetterPaper = document.getElementById('wishLetterPaper');
+  const wishContinueBtn = document.getElementById('wishContinueBtn');
+
+  if (wishOpenBtn && wishEnvelope && wishLetterPaper) {
+    wishOpenBtn.addEventListener('click', () => {
+      wishEnvelope.classList.add('is-open');
+      wishOpenBtn.setAttribute('aria-expanded', 'true');
+      wishOpenBtn.hidden = true;
+
+      // Let the envelope flap animation start before the letter slides out
+      window.setTimeout(() => {
+        wishLetterPaper.hidden = false;
+        wishLetterPaper.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'nearest' });
+
+        // Reveal the bridge button once the letter has settled in
+        if (wishContinueBtn) {
+          window.setTimeout(() => {
+            wishContinueBtn.hidden = false;
+          }, prefersReducedMotion ? 0 : 450);
+        }
+      }, prefersReducedMotion ? 0 : 550);
+    });
+  }
+
+  if (wishContinueBtn) {
+    wishContinueBtn.addEventListener('click', () => {
+      const cakeSection = document.getElementById('wish');
+      if (cakeSection) {
+        cakeSection.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+      }
+    });
+  }
+
+  /* ---------------------------------------------------------------------
      5b. LITTLE GIFTS (gift box → modal)
   --------------------------------------------------------------------- */
   const giftBoxes = document.querySelectorAll('.gift-box');
@@ -376,6 +414,15 @@
     envelope.classList.remove('is-open');
     envelope.setAttribute('aria-expanded', 'false');
     letterPaper.hidden = true;
+
+    // Reset wishes envelope/letter state
+    if (wishEnvelope) wishEnvelope.classList.remove('is-open');
+    if (wishOpenBtn) {
+      wishOpenBtn.hidden = false;
+      wishOpenBtn.setAttribute('aria-expanded', 'false');
+    }
+    if (wishLetterPaper) wishLetterPaper.hidden = true;
+    if (wishContinueBtn) wishContinueBtn.hidden = true;
 
     // Reset gift modal (in case it was left open) and gift-related scroll lock
     if (giftModal) {
