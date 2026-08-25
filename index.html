@@ -110,7 +110,7 @@
           </button>
           <div class="love-card__body">
             <h3 class="love-card__title">Your Smile</h3>
-            <p class="love-card__text">[Liat Senyum yang Manisnya tiada tara ini, sering2 senyum ya sayang aku suka banget liat senyum manis kamu]</p>
+            <p class="love-card__text">Liat Senyum yang Manisnya tiada tara ini, sering2 senyum ya sayang aku suka banget liat senyum manis kamu</p>
           </div>
         </article>
 
@@ -120,7 +120,7 @@
           </button>
           <div class="love-card__body">
             <h3 class="love-card__title">Your Laugh</h3>
-            <p class="love-card__text">[nahhh aku hampir lupa aku punya foto ini,aku senpet mikir ni cewe sering ketawa masa aku gpunya fotonya samsek sih gitu tapi yey adaaa, semoga aku bisa selalu bikin kamu ketawa ya sayang]</p>
+            <p class="love-card__text">nahhh aku hampir lupa aku punya foto ini,aku senpet mikir ni cewe sering ketawa masa aku gpunya fotonya samsek sih gitu tapi yey adaaa, semoga aku bisa selalu bikin kamu ketawa ya sayang</p>
           </div>
         </article>
 
@@ -195,7 +195,7 @@
       </div>
     </section>
 
-    <!-- 5. LITTLE GIFTS -->
+    <!-- 5. LITTLE GIFTS 
     <section id="gifts" class="section gifts" aria-label="Hadiah Kecil Untuk Kamu">
       <header class="section__header reveal">
         <p class="section__eyebrow">bagian empat</p>
@@ -244,8 +244,8 @@
           <span class="gift-box__label">Something I<br>Want You To Know</span>
         </button>
       </div>
-
-      <!-- Gift modal -->
+-->
+      <!-- Gift modal 
       <div id="giftModal" class="gift-modal" aria-hidden="true">
         <button class="gift-modal__close" id="giftModalClose" type="button" aria-label="Tutup">✕</button>
         <div class="gift-modal__card">
@@ -255,11 +255,11 @@
         </div>
       </div>
     </section>
-
+-->
     <!-- 6. A LETTER FOR YOU -->
     <section id="letter" class="section letter" aria-label="Surat Untuk Kamu">
       <header class="section__header reveal">
-        <p class="section__eyebrow">bagian lima</p>
+        <p class="section__eyebrow">bagian Empat</p>
         <h2 class="section__title">A Letter<br>For You</h2>
       </header>
 
@@ -303,35 +303,37 @@ Love you ❤️
     <!-- 7. WISHES FOR YOU -->
     <section id="wishes" class="section wishes" aria-label="Harapan Untuk Kamu">
       <header class="section__header reveal">
-        <p class="section__eyebrow">bagian enam</p>
-        <h2 class="section__title">Wishes<br>For You</h2>
-        <p class="section__subtitle">Aku harap tahun ini bawa kamu lebih banyak&hellip;</p>
+        <p class="section__eyebrow">bagian Lima</p>
+        <h2 class="section__title">A Little Wish<br>For You</h2>
+        <p class="section__subtitle">Before you make your wish, let me make one for you.</p>
       </header>
 
-      <div class="wishes__grid">
-        <article class="wish-card reveal">
-          <span class="wish-card__icon" aria-hidden="true">🌟</span>
-          <p class="wish-card__text">More reasons to smile</p>
-        </article>
+      <div class="wish-letter reveal">
+        <div class="wish-letter__stage">
+          <div id="wishEnvelope" class="wish-envelope" aria-hidden="true">
+            <span class="wish-envelope__body"></span>
+            <span class="wish-envelope__flap"></span>
+            <span class="wish-envelope__seal">💌</span>
+          </div>
 
-        <article class="wish-card reveal">
-          <span class="wish-card__icon" aria-hidden="true">🌷</span>
-          <p class="wish-card__text">More beautiful moments</p>
-        </article>
+          <button id="wishOpenBtn" class="btn btn--primary wish-letter__open-btn" type="button" aria-controls="wishLetterPaper" aria-expanded="false">
+            Open it <span aria-hidden="true">💌</span>
+          </button>
+        </div>
 
-        <article class="wish-card reveal">
-          <span class="wish-card__icon" aria-hidden="true">✨</span>
-          <p class="wish-card__text">More dreams coming true</p>
-        </article>
+        <article id="wishLetterPaper" class="letter-paper wish-letter-paper" hidden>
+          <p class="wish-letter-paper__heading">My wish for you&hellip;</p>
+          <div class="letter-paper__body wish-letter-paper__body">
+            <p>aku gatau tahun ini bakal bawa kamu kemana, yang kemanapun kamu pergi aku harap kamu selalu nemuin hal2 yang bikin kamu bahagia</p>
+            <p>Semoga di umur kamu yang baru ini, kamu selalu dikelilingi hal-hal baik. Semoga semua yang kamu perjuangkan pelan-pelan menemukan jalannya, semua yang kamu takutkan bisa kamu lewati, dan semua hal yang kamu impikan suatu hari bisa kamu capaii.</p>
+            <p>Kalau nanti ada hari yang berat, semoga kamu punya cukup kuat buat ngelewatin itu. Kalau ada hari ketika kamu ngerasa sendirian, semoga kamu selalu ingat kalau ada orang yang akan tetap memilih untuk ada buat kamu(dan itu aku ya).</p>
+            <p>And selfishly&hellip;</p>
+            <p>semoga aku masih bisa ada di samping kamu, nemenin kamu melewati banyak umur lagi. Semoga di antara banyak hal yang berubah nanti, kita tetap jadi kita. ❤️</p>
+          </div>
 
-        <article class="wish-card reveal">
-          <span class="wish-card__icon" aria-hidden="true">💫</span>
-          <p class="wish-card__text">More things you're proud of</p>
-        </article>
-
-        <article class="wish-card reveal">
-          <span class="wish-card__icon" aria-hidden="true">❤️</span>
-          <p class="wish-card__text">More happiness</p>
+          <button id="wishContinueBtn" class="btn btn--ghost wish-letter-paper__continue" type="button" hidden>
+            Now make your wish <span aria-hidden="true">✨</span>
+          </button>
         </article>
       </div>
     </section>
